@@ -1,0 +1,96 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    padding: 104px 122px;
+
+    color: #162120;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    line-height: normal;
+}
+
+.footer h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer a{
+    font-size: 16px;
+    color: #162120;
+    text-decoration: none;
+}
+
+.footer h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    list-style: none;
+}
+
+
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer_bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.socials #logo{
+    width: 95px;
+    height: 38px;
+}
+
+.socials div{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.downloads{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.downloads_child{
+    display: flex;
+    /* width: 192px;
+    height: 60px; */
+    padding: 10px 20px;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 10px;
+    background: linear-gradient(180deg, #11283F 0%, #0B1A28 100%);
+}
+
+.downloads_child span{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#getit{
+    width: 50.935px;
+height: 8.153px;
+}
