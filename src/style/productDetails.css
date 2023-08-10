@@ -1,0 +1,57 @@
+.product_details{
+    display: flex;
+
+    padding: 0 121px;
+}
+
+.pics{
+    display: flex;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.details h2{
+    color: var(--black, #121025);
+    font-family: Plus Jakarta Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50.5px;
+}
+
+.details p{
+    color: var(--black, #121025);
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.quantity_container{
+    display: flex;
+    gap: 25px;
+}
+
+.details .price p:nth-child(1){
+    color: var(--purple-gray, #676B78);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+text-decoration-line: strikethrough;
+}
+.quantity{
+    display: flex;
+}
+
+.details .btn_cart{
+    padding: 8px 0px;
+
+    border: none;
+    border-radius: 8px;
+    background: #FC7E06;
+}

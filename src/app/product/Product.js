@@ -1,11 +1,8 @@
 "use client"
 
 import React, { useState } from 'react'
-// import product from "../../../Assets/product.svg"
 import Dropdown from '@/components/Dropdown'
 import "../../style/Product.css"
-// import cart from "../../../Assets/bag.svg"
-// import badge from "../../../Assets/badge.svg"
 
 
 const Product = () => {

@@ -3,8 +3,6 @@
 import React, { useState } from 'react'
 import "../style/Navbar.css"
 import Dropdown from './Dropdown'
-// import logo from "/logo.svg"
-// import cart from "/Assets/cart-shopping.svg"
 
 const NavBar = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -23,7 +21,6 @@ const NavBar = () => {
     <nav className='nav'>
         
       <img src="/logo.svg" alt="Logo"  />
-      {/* <Dropdown op1={"Lahore"} op2={"Karachi"} op3={"Islamabad"} op4={"Rawalpindi"}/> */}
       <Dropdown options={options} onSelect={handleSelection} />
       <input type="text" placeholder='Search for Products' />
       <button className='btn_primary btn_login'>Log in</button>
