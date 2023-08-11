@@ -1,20 +1,41 @@
-.product_details{
+.product_details {
     display: flex;
 
-    padding: 0 121px;
+    gap: 75px;
+
+    padding: 55px 121px;
 }
 
-.pics{
+.pics {
     display: flex;
 }
 
-.details{
+.main_pic{
+    height: 400px;
+    width: 400px;
+
+    border-radius: 100%;
+    background-color: #FFE6C2;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.main_pic img{
+    /* height: 400px;
+    width: 400px;
+
+    border-radius: 500px;
+    background-color: #FFE6C2; */
+}
+
+.details {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.details h2{
+.details h2 {
     color: var(--black, #121025);
     font-family: Plus Jakarta Sans;
     font-size: 40px;
@@ -23,35 +44,90 @@
     line-height: 50.5px;
 }
 
-.details p{
+.details .description {
     color: var(--black, #121025);
     font-family: Plus Jakarta Sans;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; 
+    line-height: 24px;
 }
 
-.quantity_container{
+.about_txt{
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 160% */
+}
+
+.quantity_container {
     display: flex;
+    align-items: flex-end;
     gap: 25px;
 }
 
-.details .price p:nth-child(1){
-    color: var(--purple-gray, #676B78);
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-text-decoration-line: strikethrough;
-}
-.quantity{
-    display: flex;
+.quantity_txt{
+    color: var(--3, #A19FB0);
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
-.details .btn_cart{
-    padding: 8px 0px;
+.quantity_container select {
+    width: 167px;
+    height: 40px;
+    border: 1px solid #EAEAEF;
+    padding: 0 15px;
+
+}
+
+.details .price p:nth-child(1) {
+    color: var(--purple-gray, #676B78);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration-line: strikethrough;
+}
+
+.details .price p:nth-child(2) {
+    color: #418C51;
+    font-family: Plus Jakarta Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+}
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    border: 1px solid #EAEAEF;
+}
+
+.details .btn_cart {
+    padding: 15px 0px;
 
     border: none;
     border-radius: 8px;
     background: #FC7E06;
+    cursor: pointer;
+}
+
+
+.btn_quantity {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 10px 30px;
+    height: min-content;
+
+    /* background-color: blue; */
 }
