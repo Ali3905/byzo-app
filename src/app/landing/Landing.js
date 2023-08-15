@@ -6,12 +6,12 @@ import ProductDetails from '../product/ProductDetails'
 
 const Landing = () => {
   return (
-    <div>
+    <>
         <NavBar/>
         <ProductDetails/>
         <Product/>
         <Footer/>
-    </div>
+    </>
   )
 }
 
