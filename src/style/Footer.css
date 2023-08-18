@@ -94,3 +94,21 @@
     width: 50.935px;
 height: 8.153px;
 }
+
+@media (max-width: 768px) {
+    .footer{
+        gap: 22px;
+        margin-top: 50px;
+        padding: 4px 34px;
+        padding-bottom: 40px;
+    }
+
+    .footer_top > *:nth-child(n+3){
+        display: none;
+    }
+
+    .footer_bottom{
+        display: none;
+    }
+    
+}

@@ -12,6 +12,11 @@ const BulkOrder = () => {
         // console.log(e.target.files[0])
     }
 
+    const handleUpload = () => {
+      const input = document.getElementById("list")
+      input.click()
+    }
+
   return (
     <div className="bulk_order">
       <h3>Looking for Bulk Orders?</h3>
@@ -29,7 +34,7 @@ const BulkOrder = () => {
         <div className="bulk_order_list_left">
           <h2>Upload your <span>Bulk Order</span> list and get a call back in a minute</h2>
           <p>We priorities quality in each of our grocery,Just order a product and get it delivered at your doorstep  product and get it delivered at your doorstep</p>
-          <button>Upload</button>
+          <button onClick={handleUpload}>Upload</button>
         </div>
         <div className="bulk_order_list_right">
             <h4>Upload your grocery photo or PDF</h4>
@@ -48,6 +53,7 @@ const BulkOrder = () => {
             height={100}
             className="list_img"
             />}
+            <button onClick={handleUpload}>Upload</button>
         </div>
       </div>
     </div>

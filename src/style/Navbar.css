@@ -47,6 +47,10 @@
     height: 24px;
 }
 
+.btn_grid{
+    display: none;
+}
+
 
 /* Dropdown.css */
 select {
@@ -69,3 +73,34 @@ select {
     border-color: #00a8e6;
   }
   
+
+  @media (max-width: 768px) {
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 17px;
+        gap: 20px;
+    
+        background: #E2EDE4;
+    }
+    
+
+    .btn_grid{
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+    }
+
+    
+.nav img{
+    width: fit-content;
+    height: fit-content;
+}
+    
+
+    .nav > *:not(:first-child, :last-child) {
+        display: none;
+    }
+  }

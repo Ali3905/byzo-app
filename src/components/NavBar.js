@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import "../style/Navbar.css"
 import Dropdown from './Dropdown'
+import Image from 'next/image';
 
 const NavBar = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -26,7 +27,17 @@ const NavBar = () => {
       <button className='btn_primary btn_login'>Log in</button>
       <button className='btn_primary btn_cart'>
         <img src="/cart-shopping.svg" alt="cart" id='cart' />
-        My Cart</button>
+        My Cart
+      </button>
+      <button className='btn_grid'>
+        <Image
+        src="/Grid.svg" 
+        height={24}
+        width={24}
+        alt="grid" 
+        id='grid' 
+        />
+      </button>
 
     </nav>
   )
