@@ -1,10 +1,12 @@
 import React from 'react'
 import Auth from './Auth'
+import Signin from './Signin'
 
 const page = () => {
   return (
     <div>
-      <Auth />
+      {/* <Auth /> */}
+      <Signin />
     </div>
   )
 }

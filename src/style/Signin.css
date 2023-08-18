@@ -1,0 +1,88 @@
+.signin{
+    max-width: 30vw;
+    min-height: 75vh;
+    margin: 0 auto;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    /* padding: 20px 60px; */
+
+    border-radius: 40px;
+background: #FFF;
+box-shadow: 0px 4px 39px 0px rgba(0, 0, 0, 0.25);
+overflow: hidden;
+/* position: relative; */
+}
+
+.signin .welcome{
+     min-height: 200px;
+    /* width: 400px; */
+    /* background-color: black; */
+    color: white;
+    /* border-radius: 100%; */
+    background-image: url("../../public/signin_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: absolute;
+    top: -60%;
+    right: 20%; */
+}
+
+
+.signin_form{
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.signin_form h4{
+    color: #525252;
+font-family: Plus Jakarta Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 83.333% */
+}
+
+.mobile_num{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 17px;
+
+    border-radius: 8px;
+border: 1px solid #C1C1C1;
+}
+
+.mobile_num p{
+    color: var(--black, #121025);
+font-family: Plus Jakarta Sans;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 160% */
+}
+
+
+.signin_btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+
+.signin_btns p{
+    color: #525252;
+font-family: Plus Jakarta Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.signin_btns img{
+    background-color: #525252;
+    border-radius: 100%;
+}
