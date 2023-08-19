@@ -20,3 +20,19 @@
 
   cursor: pointer;
 }
+
+.hidden{
+  display: none;
+}
+
+.inline_block{
+  display: inline-block;
+}
+
+.rotate_180{
+  transform: rotate(180deg);
+}
+
+.rotate_-180{
+  transform: rotate(-180deg);
+}

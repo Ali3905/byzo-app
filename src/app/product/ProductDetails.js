@@ -1,12 +1,15 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../style/productDetails.css"
 import Image from 'next/image'
 import Dropdown from '@/components/Dropdown'
 
 const ProductDetails = () => {
+  let width = 0
     const [selectedOption, setSelectedOption] = useState("")
+    const [hideDetails, sethideDetails] = useState(false)
+    const [hideBtn, setHideBtn] = useState(false)
     const [data, setData] = useState({
       title: "YADU Natural Sulphurless double refined Sugar",
       details: "New with box: A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached New with box: A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached",
@@ -43,6 +46,29 @@ const ProductDetails = () => {
       setData({...data, mainImg: data.images[i]})
     }
 
+    const changeClasses = (prev) => {
+      sethideDetails(!prev)
+    }
+
+    useEffect(()=>{
+      window.addEventListener('resize', ()=> {
+        width = window.innerWidth
+        if(window.innerWidth < 768){
+          sethideDetails(true)
+          console.log("I am small");
+        }else{
+          console.log("I am Large");
+          sethideDetails(false)
+        }
+        })
+
+      if (width<768) {
+        console.log("main choti bachi hun");
+        
+        sethideDetails(true)
+      }
+    },[])
+
   return (
     <>
     <div className='product_details'>
@@ -50,6 +76,7 @@ const ProductDetails = () => {
         <div className="pics_group">
             {data.images.map((ele, i)=>{
                 return <Image 
+                key={i}
                 src={ele}
                 height={60}
                 width={60}
@@ -67,8 +94,18 @@ const ProductDetails = () => {
       </div>
       <div className="details">
         <h2>{data.title}</h2>
-        <p className='about_txt'>About Product</p>
-        <p className='description'>{data.details}</p>
+        <p className='about_txt'>
+          About Product 
+          <Image 
+          src="/rightArrowWithoutTail.svg"
+          width={100}
+          height={250}
+          alt='about'
+          className={`${hideBtn?"hidden":"inline_block"}`}
+          onClick={()=>changeClasses(hideDetails)}
+          />
+        </p>
+        <p className={`${hideDetails?"hidden":"inline_block"}  description`}>{data.details}</p>
         <div className='quantity_container'>
 
         <div>

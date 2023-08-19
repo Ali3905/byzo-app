@@ -1,12 +1,14 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Dropdown from '@/components/Dropdown'
 import "../../style/Product.css"
 
 
 const Product = () => {
+  let width = 0
     const [selectedOption, setSelectedOption] = useState("");
+    const [hideDetails, sethideDetails] = useState(false)
     const options = [
         { value: "option1", label: "Option 1" },
         { value: "option2", label: "Option 2" },
@@ -17,6 +19,25 @@ const Product = () => {
       const handleSelection = (selectedValue) => {
         setSelectedOption(selectedValue);
       };
+
+      useEffect(()=>{
+        window.addEventListener('resize', ()=> {
+          width = window.innerWidth
+          if(window.innerWidth < 768){
+            sethideDetails(true)
+            console.log("I am small");
+          }else{
+            console.log("I am Large");
+            sethideDetails(false)
+          }
+          })
+  
+        if (width<768) {
+          console.log("main choti bachi hun");
+          
+          sethideDetails(true)
+        }
+      },[])
     return (
     <section className='products'>
 
@@ -50,7 +71,8 @@ const Product = () => {
         <Dropdown options={options} onSelect={handleSelection} /> 
         <button>
             <img src="/bag.svg" alt="cart" />
-            Add to Bag</button>
+            {!hideDetails?"Add to Bag":null}
+            </button>
       </div>
 
     </div>
