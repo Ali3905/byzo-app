@@ -8,8 +8,8 @@ import Dropdown from '@/components/Dropdown'
 const ProductDetails = () => {
   let width = 0
     const [selectedOption, setSelectedOption] = useState("")
-    const [hideDetails, sethideDetails] = useState(false)
-    const [hideBtn, setHideBtn] = useState(false)
+    const [hideDetails, sethideDetails] = useState(null)
+    const [hideBtn, setHideBtn] = useState(null)
     const [data, setData] = useState({
       title: "YADU Natural Sulphurless double refined Sugar",
       details: "New with box: A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached New with box: A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached",
@@ -53,19 +53,25 @@ const ProductDetails = () => {
     useEffect(()=>{
       window.addEventListener('resize', ()=> {
         width = window.innerWidth
-        if(window.innerWidth < 768){
+        if(window.innerWidth < 769){
           sethideDetails(true)
+          setHideBtn(false)
           console.log("I am small");
         }else{
           console.log("I am Large");
           sethideDetails(false)
+          setHideBtn(true)
         }
         })
 
-      if (width<768) {
+      if (window.innerWidth<769) {
         console.log("main choti bachi hun");
         
         sethideDetails(true)
+        setHideBtn(false)
+      }else{
+        sethideDetails(false)
+        setHideBtn(true)
       }
     },[])
 

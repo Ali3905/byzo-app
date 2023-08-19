@@ -263,6 +263,30 @@ const Cart = () => {
                     <p>You Saved 20 in this order</p>
                 </div>
 
+                <div className="cart_bill_container">
+                    <div>
+                        <p>Item total <br /> <span className='cart_bill_sm_txt'>for 5 items</span></p>
+                        <p>&#8377;1000.50</p>
+                    </div>
+                    <div>
+                        <p>Handling Charge</p>
+                        <span><p>&#8377;15</p><p>&#8377;5</p></span>
+                    </div>
+                    <div>
+                        <p>Delivery Fee</p>
+                        <span><p>&#8377;40</p><p>&#8377;0</p></span>
+                    </div>
+                    <span></span>
+                    <div className='cart_bill_total_discount'>
+                        <p>Total Discount</p>
+                        <p>&#8377;50</p>
+                    </div>
+                    <div className='cart_bill_to_pay'>
+                        <p>To Pay</p>
+                        <p>&#8377;1040.40</p>
+                    </div>
+                    <p>You can choose a shipping method in the next step</p>
+                </div>
                 <div className="cart_address">
                     <h6>Home</h6>
                     <p>{data.shipping_address}</p>

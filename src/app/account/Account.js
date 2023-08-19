@@ -1,13 +1,33 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import "../../style/Account.css"
 import Image from 'next/image'
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
+
 
 const Account = () => {
+  
+  const [showDetails, setShowDetails] = useState(false)
+
+  useEffect(()=>{
+    window.addEventListener('resize', ()=> {
+      if(window.innerWidth < 769){
+        setShowDetails(true)
+        console.log("I am small");
+      }else{
+        console.log("I am Large");
+        setShowDetails(false)
+      }
+      })
+
+    if (window.innerWidth<769) {
+      console.log("main choti bachi hun");
+      
+      setShowDetails(true)
+    }
+  },[])
   return (
     <>
-    <NavBar />
     <div className='account'>
 
       <ul className="side_bar">
@@ -19,7 +39,14 @@ const Account = () => {
 
       <div className="account_details">
         <div className="heading_logout">
-            <h6>Personal Info</h6>
+            <h6>
+              {showDetails && <Image 
+                src='/rightArrowWithoutTail.svg'
+                width={20}
+                height={20}
+                />}
+              Personal Info
+            </h6>
             <button>Logout</button>
         </div>
         <div className="details_item">
@@ -47,7 +74,6 @@ const Account = () => {
         </div>
       </div>
     </div>
-    <Footer />
     </>
   )
 }

@@ -22,8 +22,7 @@ const Product = () => {
 
       useEffect(()=>{
         window.addEventListener('resize', ()=> {
-          width = window.innerWidth
-          if(window.innerWidth < 768){
+          if(window.innerWidth < 769){
             sethideDetails(true)
             console.log("I am small");
           }else{
@@ -32,7 +31,7 @@ const Product = () => {
           }
           })
   
-        if (width<768) {
+        if (window.innerWidth<769) {
           console.log("main choti bachi hun");
           
           sethideDetails(true)
