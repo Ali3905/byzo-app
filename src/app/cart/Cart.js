@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../style/Cart.css"
 import Image from 'next/image'
 import Dropdown from '@/components/Dropdown'
@@ -8,6 +8,7 @@ import Link from 'next/link'
 
 const Cart = () => {
     const [selectedOption, setSelectedOption] = useState("")
+    const [smallScreen, setSmallScrenn] = useState(null)
 
     const [data, setData] = useState({
         items: [{
@@ -126,11 +127,30 @@ const Cart = () => {
         setData(newData);
        }
 
+       useEffect(()=>{
+        window.addEventListener('resize', ()=> {
+          if(window.innerWidth < 769){
+            setSmallScrenn(true)
+          }else{
+            setSmallScrenn(false)
+          }
+          })
+  
+        if (smallScreen) {
+          setSmallScrenn(true)
+        }else{
+          setSmallScrenn(false)
+        }
+      },[])
+
   return (
     <div className='cart'>
         <h2>My Cart</h2>
         <div className='cart_parent'>
             <div className="cart_child_left">
+            {smallScreen && <div className="cart_discount_alert">
+                    <p>You Saved 20 in this order</p>
+                </div>}
                 <div className='cart_items_parent'>
                     <div className='cart_items_head'>
                         <p>{data.items.length} items selected</p>
@@ -159,6 +179,8 @@ const Cart = () => {
                                 <Dropdown options={ele.weightVariations} onSelect={handleSelection}/>
                             </div>
                         </div>
+                        <div className="price_quantity">
+
                         <div className="cart_item_quantity">
                             <button className='btn_quantity' onClick={()=>increment("-", i)}>-</button>
                             <p>{data.items[i].quantity}</p>
@@ -168,17 +190,19 @@ const Cart = () => {
                             <p>&#8377;{ele.originalPrice}</p>
                             <p>&#8377;{ele.discountedPrice}</p>
                         </div>
+                        </div>
                         <Image
                         src="/trash.svg"
                         alt='delete'
                         height={25}
                         width={25}
+                        className='trash_img'
                         />
                     </div>
                         
                     })}
                 </div>
-                <div className="cart_instructions_parent">
+                {!smallScreen && <div className="cart_instructions_parent">
                 <h4>Delivery Instructions</h4>
                 <div className="cart_instructions">
                     <div>
@@ -188,12 +212,12 @@ const Cart = () => {
                         width={75}
                         height={75}
                         />
-                        <div>
+                        <div className='cart_instructions_txt'>
                             <p>No Contact Delivery</p>
                             <p>Delivery partner will leave your order at the door</p>
                         </div>
                     </div>
-                    <div>
+                    <div className='cart_instructions_txt'>
                         <Image 
                         src="/pet.svg"
                         alt='pet'
@@ -206,7 +230,7 @@ const Cart = () => {
                         </div>
                     </div>
                 </div>
-                </div>
+                </div>}
 
                 <div className="cart_delivery_partner_tip_parent">
                     <h4>Delivery Partner Tip</h4>
@@ -259,9 +283,9 @@ const Cart = () => {
                     height={24}
                     />
                 </div>
-                <div className="cart_discount_alert">
+                {!smallScreen && <div className="cart_discount_alert">
                     <p>You Saved 20 in this order</p>
-                </div>
+                </div>}
 
                 <div className="cart_bill_container">
                     <div>
@@ -287,6 +311,35 @@ const Cart = () => {
                     </div>
                     <p>You can choose a shipping method in the next step</p>
                 </div>
+                {smallScreen && <div className="cart_instructions_parent">
+                <h4>Delivery Instructions</h4>
+                <div className="cart_instructions">
+                    <div>
+                        <Image 
+                        src="/door.svg"
+                        alt='door'
+                        width={75}
+                        height={75}
+                        />
+                        <div className='cart_instructions_txt'>
+                            <p>No Contact Delivery</p>
+                            <p>Delivery partner will leave your order at the door</p>
+                        </div>
+                    </div>
+                    <div className='cart_instructions_txt'>
+                        <Image 
+                        src="/pet.svg"
+                        alt='pet'
+                        width={75}
+                        height={75}
+                        />
+                        <div>
+                            <p>Beware of pets</p>
+                            <p>Delivery partner will leave your order at the door</p>
+                        </div>
+                    </div>
+                </div>
+                </div>}
                 <div className="cart_address">
                     <h6>Home</h6>
                     <p>{data.shipping_address}</p>

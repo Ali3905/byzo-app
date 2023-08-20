@@ -40,7 +40,8 @@ const Card = () => {
         <Dropdown options={options} onSelect={handleSelection} /> 
         <button>
             <img src="/bag.svg" alt="cart" />
-            Add to Bag</button>
+            {window.innerWidth>768?"Add to Bag":""}
+            </button>
       </div>
 
     </div>

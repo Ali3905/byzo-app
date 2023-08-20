@@ -1,33 +1,37 @@
-.category{
+.category {
     /* background-color: black; */
     padding: 43px 120px;
 }
-.category_items_parent{
+
+.category_items_parent {
     display: flex;
     flex-direction: column;
-    gap:42px;
+    gap: 42px;
 }
-.category_items_parent div:nth-child(1){
+
+/* .category_items_parent div:nth-child(1) {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     gap: 24px;
-}
-.category_items_parent div:nth-child(1) h3{
+} */
+
+.category_items_parent div:nth-child(1) h3 {
     color: #000;
-text-align: center;
-font-family: Plus Jakarta Sans;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-.category_items_container{
+
+.category_items_container {
     display: flex;
     gap: 24px;
 }
 
-.category_item{
+.category_item {
     /* background-color: black; */
     display: flex;
     align-items: center;
@@ -37,7 +41,7 @@ line-height: normal;
     border-radius: 20px;
 }
 
-.category_item p{
+.category_item p {
     color: #3F3F3F;
     text-align: center;
     font-family: Plus Jakarta Sans;
@@ -49,26 +53,72 @@ line-height: normal;
 
 
 .prev_btn,
-.next_btn
-{
+.next_btn {
     border-radius: 50px;
     width: 30px;
     height: 30px;
     padding: 3px;
 }
 
-.prev_btn{
+.prev_btn {
     background-color: #418C51;
 }
 
-.category_products{
+.category_products {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 24px;
 }
+
 /* 
 .category_products div{
     max-width: 115px;
     max-height: 200px;
 } */
+
+@media (max-width: 768px) {
+    .category {
+        /* background-color: black; */
+        padding: 26px 15px;
+    }
+
+    .category_items_parent div:nth-child(1)>div {
+        display: none
+    }
+
+    .category_items_parent div:nth-child(1)>h3 {
+        text-align: left;
+        font-size: 20px;
+    }
+    .category_items_container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .category_item {
+        /* background-color: black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start !important;
+        gap: 10px;
+        padding: 10px 18px;
+        background-color: unset;
+        max-width: 218px;
+        border-radius: 20px;
+    }
+    
+    .category_item p {
+        color: #3F3F3F;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+    
+    
+}
