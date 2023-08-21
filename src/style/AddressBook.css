@@ -24,11 +24,32 @@
     font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 
 .address_book .socials{
     display: flex;
     gap: 28px;
+}
+
+@media (max-width: 768px) {
+    .address_book > img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .address_book h3{
+        font-size: 24px;
+    }
+    .address_book p{
+        max-width: 380px;
+        /* color: #000;
+        text-align: center;
+        font-family: Plus Jakarta Sans; */
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 128%;
+    }
 }

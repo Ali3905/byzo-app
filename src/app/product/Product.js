@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Dropdown from '@/components/Dropdown'
-import "../../style/Product.css"
+import "../../style/Prod.css"
 
 
 const Product = () => {

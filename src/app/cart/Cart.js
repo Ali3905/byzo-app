@@ -144,8 +144,24 @@ const Cart = () => {
       },[])
 
   return (
+    <>
+    {smallScreen && <ul className='small_screen_nav'>
+            <li>
+                <Image 
+                src="/rightArrowWithoutTail.svg"
+                width={25}
+                height={35}
+                />
+            </li>
+            <li>
+                Cart(7 items)
+            </li>
+            <li>
+                Empty Cart
+            </li>
+        </ul>}
     <div className='cart'>
-        <h2>My Cart</h2>
+        {!smallScreen && <h2>My Cart</h2>}
         <div className='cart_parent'>
             <div className="cart_child_left">
             {smallScreen && <div className="cart_discount_alert">
@@ -351,6 +367,7 @@ const Cart = () => {
         </div>
       
     </div>
+    </>
   )
 }
 

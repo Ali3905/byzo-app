@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/Image'
+import Image from 'next/image'
 import "../../style/AddressBook.css"
 
 const AddressBook = () => {
