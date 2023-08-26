@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import "../../style/product.css"
+import "../../style/prod.css"
 import Dropdown from '@/components/Dropdown'
 
 const Card = () => {

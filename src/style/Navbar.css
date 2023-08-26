@@ -76,7 +76,7 @@ select {
 
   @media (max-width: 768px) {
 
-    .nav{
+    /* .nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -84,6 +84,10 @@ select {
         gap: 20px;
     
         background: #E2EDE4;
+    } */
+
+    .nav{
+        display: none;
     }
     
 

@@ -47,7 +47,6 @@
     /* 10.8px */
 }
 
-.card .badge {}
 
 .card .img_container {
     display: flex;
@@ -106,6 +105,7 @@
     color: #333;
     cursor: pointer;
     transition: border-color 0.2s ease;
+    background-color: white;
 
 }
 
@@ -198,17 +198,31 @@ select:focus {
     .products .top>div {
         display: none;
     }
-
+    
     .top h2 {
         font-size: 20px;
     }
 
     .card {
-        width: 125px;
+        width: 95px;
         height: 193px;
         padding: 9px 10px;
     }
-
+    
+    .card select {
+        padding: 8px 3px;
+        font-size: 7px;
+        /* border: 1px solid #ccc; */
+        box-shadow: -4px 4px 36px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        outline: none;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+        background-color: white;
+    
+    }
     .card .img_container {
         display: flex;
         justify-content: center;
@@ -221,6 +235,8 @@ select:focus {
         background-color: #FFE6C2;
         border-radius: 300px;
     }
+    
+
 
     .card .img_container img {
         width: 55px;
