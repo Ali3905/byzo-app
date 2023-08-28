@@ -1,0 +1,140 @@
+.mockup_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 120px 57px;
+}
+
+/* 
+.mockup .image{
+ position: relative; 
+} */
+
+.mockup {
+    /* height: 453px; */
+    position: relative;
+}
+
+.mockup .image svg {
+    position: absolute;
+    /* top: 5px;
+ left: 5px; */
+}
+
+#mockup_image {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    width: 247px;
+    height: 531px;
+    border-radius: 20px;
+}
+
+.image_txt_right,
+.image_txt_left {
+    border-radius: 9px;
+    background: #FFF;
+    box-shadow: -8px 8px 20px 0px rgba(0, 0, 0, 0.11);
+    min-width: 330px;
+
+    display: flex;
+    gap: 9px;
+    padding: 22px 24px;
+
+    position: absolute;
+    top: 20%;
+    left: 100px;
+}
+
+.image_txt_left {
+    
+    top: 60%;
+    left: -30px;
+}
+
+.image_txt_right > img,
+.image_txt_left > img {
+    width: 34px;
+    height: 34px;
+    color: white;
+    background-color: #FC7E06;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.image_txt_right > h2,
+.image_txt_left > h2 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px; /* 137.5% */
+}
+
+.image_txt_right > p,
+.image_txt_left > p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.mockup_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    align-items: flex-start;
+}
+
+.mockup_txt h2{
+    color: var(--dark-black, #0E0D17);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px; /* 131.25% */
+    letter-spacing: -1.92px;
+}
+
+.mockup_txt h2 span{
+    color: #418C51;
+}
+
+.mockup_txt > p{
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mockup_txt ul{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.mockup_txt li{
+    display: flex;
+    gap: 23px;
+
+    color: #000;
+font-size: 24px;
+font-weight: 500;
+}
+
+.mockup_txt li > img{
+    color: white;
+    background-color: #FC7E06;
+    padding: 6px;
+    border-radius: 100%;
+}
+
+.mockup_txt button{
+    color: white;
+    background-color: #FC7E06;
+    padding: 14px 59px;
+    border-radius: 10px;
+    border: none;
+}

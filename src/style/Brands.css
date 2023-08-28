@@ -1,0 +1,35 @@
+.brands_section{
+    padding: 120px 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.brands_section h2{
+
+}
+
+.brands_container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.brand{
+    width: 78px;
+height: 78px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px ;
+
+border-radius: 100%;
+background: #FFF;
+box-shadow: -4px 4px 36px 0px rgba(0, 0, 0, 0.12);
+}
+
+.brand img{
+    width: 68px;
+    height: 68px;
+}
