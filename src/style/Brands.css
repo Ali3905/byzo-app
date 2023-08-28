@@ -17,7 +17,12 @@
 }
 
 .brand{
-    width: 78px;
+    /* flex: 0 0 calc(7% - 10px); */
+    width: 9%;
+    min-width: 78px;
+    /* flex: 0 0 calc(13.33% - 20px); */
+  margin: 10px;
+  box-sizing: border-box;
 height: 78px;
 display: flex;
 align-items: center;
