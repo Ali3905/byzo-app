@@ -1,7 +1,7 @@
 .mockup_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 120px 57px;
+    padding: 57px 120px;
 }
 
 /* 

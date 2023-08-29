@@ -1,0 +1,78 @@
+.hero_section {
+    padding: 57px 120px;
+}
+
+.hero_left {
+    max-width: 40%;
+}
+
+.hero_left>h1 {
+    color: var(--dark-black, #0E0D17);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 84px;
+    letter-spacing: -2.1px;
+}
+
+.hero_left>h1 span {
+    color: #FC7E06;
+}
+
+.hero_left>p {
+    color: var(--dark-gray-100, #909AA8);
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+margin-top: 20px;}
+
+.hero_left>div  {
+   display: flex;
+   gap: 13px;
+   margin-top: 50px;
+}
+
+.hero_left>div button {
+    padding: 14px 0;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    min-width: 250px;
+}
+
+.hero_left>div button:first-child {
+    color: var(--light-white, #FFF);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    
+    background: #FC7E06;
+}
+
+.hero_left>div button:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    color: #418C51;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    
+    background: transparent;
+    border: 1px solid #418C51;
+}
+
+.hero_downloads{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;   
+    margin-top: 121px; 
+}
+
+.hero_downloads > h3{
+    width: 100%;
+}
