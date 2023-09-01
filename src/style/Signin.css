@@ -86,3 +86,16 @@ line-height: normal;
     background-color: #525252;
     border-radius: 100%;
 }
+
+@media (max-width: 768px) {
+    .signin{
+        max-width: none;
+        position: static;
+        box-shadow: none;
+        border-radius: unset;
+    }
+
+    .signin_form{
+        margin-top: 15vh;
+    }
+}

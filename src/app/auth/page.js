@@ -5,8 +5,8 @@ import Signin from './Signin'
 const page = () => {
   return (
     <div>
-      <Auth />
-      {/* <Signin /> */}
+      {/* <Auth /> */}
+      <Signin />
     </div>
   )
 }

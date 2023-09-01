@@ -8,8 +8,8 @@
 
 
     border-radius: 20px;
-background-color: #FFF;
-box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.25);
 }
 
 .auth .cross{
@@ -150,4 +150,23 @@ font-size: 17px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 141.176% */
+}
+
+@media (max-width : 768px) {
+    .auth{
+        max-width: none;
+        position: static;
+        border-radius: none;
+        box-shadow: none;
+    }
+    .auth_container{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 0;
+    }
+
+    .auth .cross{
+        display: none;
+    }
 }

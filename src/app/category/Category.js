@@ -38,6 +38,7 @@ const Category = () => {
             <li>
                 <Image 
                 src="/rightArrowWithoutTail.svg"
+                alt='back'
                 width={25}
                 height={35}
                 />
